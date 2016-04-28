@@ -12,7 +12,7 @@ def get_neighbors(point):
 	result = set()
 	for offset in stencil:
 		x = point[0] + offset[0]
-		if x >= 0 and x < size:
+		if x <= 0 and x < size:		#changed this line >= to <=
 			y = point[1] + offset[1]
 			if y >= 0 and y < size:
 				result |= {(x, y)}
