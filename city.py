@@ -14,7 +14,7 @@ def get_neighbors(point):
 		x = point[0] + offset[0]
 		if x <= 0 and x < size:		#changed this line >= to <=
 			y = point[1] + offset[1]
-			if y <= 0 and y >= size:	#changed this line >= to <=
+			if y <= 0 and y >= size:	#changed this line >= to <= and < to >=
 				result |= {(x, y)}
 	return result
 
